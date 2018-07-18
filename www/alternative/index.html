@@ -1,0 +1,122 @@
+<html>
+<head>
+
+<link rel="stylesheet" href="css/style.css">
+<link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css'>
+
+<script src="js/table.js"></script> 
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+</head>
+<body>
+
+<h1>TableFilter starter</h1>
+
+<table id="demo" class="table-autosort table-autofilter">
+    <thead>
+        <tr>
+            <th class="table-filterable">country</th>
+            <th class="table-sortable:numeric">isocode</th>
+            <th class="table-sortable:numeric">year</th>
+            <th>POP</th>
+            <th>XRAT</th>
+            <th>PPP</th>
+            <th>cgdp</th>
+            <th>cc</th>
+            <th class="table-sortable:alphanumeric">ci</th>
+            <th class="table-sortable" style="display: none;">ci</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Benin</td>
+            <td>BEN</td>
+            <td>1998</td>
+            <td>5950.33</td>
+            <td>589.9517822</td>
+            <td>190.95</td>
+            <td>1178.46</td>
+            <td>90.98</td>
+            <td class="item_requeststatus" style="display: none;" >Approved
+      </td>
+      <td id="item_checkbox">
+        <input id="item_1" onclick="toggleclick(this,2)" checked="unchecked" class="checkbox heart" type="checkbox" style="display:none;"><label for="item_1" class="checkbox heart"></label>
+      </td>
+        </tr>
+        <tr>
+            <td>Benin</td>
+            <td>BEN</td>
+            <td>1999</td>
+            <td>6109.53</td>
+            <td>615.6990967</td>
+            <td>200.19</td>
+            <td>1174.90</td>
+            <td>92.61</td>
+           <td class="item_requeststatus" style="display: none;">Approved
+      </td>
+      <td id="item_checkbox">
+         <input id=item_2 onclick="toggleclick(this,2)" checked="unchecked" class="checkbox heart" type="checkbox">
+      </td>
+        </tr>
+        <tr>
+            <td>Benin</td>
+            <td>BEN</td>
+            <td>2000</td>
+            <td>6272.00</td>
+            <td>711.9763184</td>
+            <td>200.61</td>
+            <td>1224.74</td>
+            <td>92.27</td>
+          <td class="item_requeststatus" style="display: none;">Approved
+      </td>
+      <td id="item_checkbox">
+         <input id=item_3 onclick="toggleclick(this,2)" checked="unchecked" class="checkbox heart" type="checkbox" style="display: none;"><label for="item_3" class="checkbox heart"></label>
+      </td>
+        </tr>
+        <tr>
+            <td>Burkina Faso</td>
+            <td>BFA</td>
+            <td>1994</td>
+            <td>9755.03</td>
+            <td>555.2047119</td>
+            <td>125.76</td>
+            <td>838.76</td>
+            <td>79.81</td>
+           <td class="item_requeststatus" style="display: none;">Approved
+      </td>
+      <td id="item_checkbox">
+        <input id=item_4 onclick="toggleclick(this,2)" checked="unchecked" class="checkbox heart" type="checkbox">
+      </td>
+        </tr>
+
+        
+    </tbody>
+</table>
+
+
+
+<script type="text/javascript">
+    function toggleclick(_this, x) {
+  //var table = document.getElementById("visitor_table");
+  var row = $(_this).closest('tr');
+  if ($(_this).is(':checked')) // check if checkbox is checked or not
+  {
+    row.find("td:eq(8)").html("Approved"); //find 3rd cell and set HTML
+  } else {
+    row.find("td:eq(8)").html("Pending");
+  }
+
+
+
+}
+</script>
+
+<script type="text/javascript">
+    $('.checkbox').click(function(){
+ $(this).toggleClass('is-checked');
+ });
+</script>
+
+</body>
+</html>
