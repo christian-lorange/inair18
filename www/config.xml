@@ -16,9 +16,7 @@
 	
     <content src="index.html" />
 
-         <engine name="android" spec="6.4.0" />
-    <engine name="ios" spec="~4.5.3" />
-    
+
     <!--
         If you do not want any permissions to be added to your app, add the
         following tag to your config.xml; you will still have the INTERNET
