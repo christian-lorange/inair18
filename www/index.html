@@ -12,7 +12,7 @@
   select.table-autofilter {
      margin-left: 5px !important;
   }
-  </style><!--<script src="js/admob2.js"></script>-->
+  </style><script src="js/admob2.js"></script>
 
   <script src="js/jquery-3.2.1.js">
   </script>
@@ -34,7 +34,7 @@
   setTimeout("CallButton()",15000)
   function CallButton()
   {
-    document.getElementById("showAd").click();    
+     admob.interstitial.show()  
   }
 
 
@@ -951,7 +951,7 @@ jQuery(document).ready(function($) {
   document.querySelector('#clearbutton').addEventListener('click', filterTable, false);
   </script> <button id="showAd" style="text-align: center;margin: auto; width: 100vw; height:40px; background: black; color: white; font-weight: bolder;">Show Some Support by Looking at an Ad!</button> 
   <script src="cordova.js" type="text/javascript">
-  </script> <!--<script type="text/javascript" src="js/admob2.js"></script>-->
+  </script> <script type="text/javascript" src="js/admob2.js"></script>
   <script src="phonegap.js" type="text/javascript">
   </script> <!--Script to change _blank hrefs to exteral  -->
    
