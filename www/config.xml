@@ -90,6 +90,33 @@
 
     <plugin name="cordova-plugin-admob-free"/>
 
+<platform  name="ios">
+    <!-- below requires the splash screen plugin -->
+    <!-- docs: https://github.com/apache/cordova-plugin-splashscreen -->
+    <preference name="AutoHideSplashScreen" value="true"/>
+    <preference name="FadeSplashScreen" value="false"/>
+    <preference name="FadeSplashScreenDuration" value="2"/>
+    <preference name="ShowSplashScreenSpinner" value="false"/>
+
+    <!-- below requires the status bar plugin -->
+    <!-- docs: https://github.com/apache/cordova-plugin-statusbar -->
+    <!-- see http://devgirl.org/2014/07/31/phonegap-developers-guid -->
+    <preference name="StatusBarOverlaysWebView" value="false"/>
+    <preference name="StatusBarBackgroundColor" value="#000000"/>
+    <preference name="StatusBarStyle" value="lightcontent"/>
+</platform>
+<platform  name="android">
+    <!-- below requires the splash screen plugin -->
+    <!-- docs: https://github.com/apache/cordova-plugin-splashscreen -->
+    <preference name="SplashMaintainAspectRatio" value="false"/>
+</platform>
+<preference name="xwalkCommandLine" value="--disable-pull-to-refresh-effect --ignore-gpu-blacklist "/>
+<platform name="ios" >
+<preference name="ios-configuration" value="adhoc"/>
+<preference name="deployment-target" value="8.0"/>
+<preference name="Fullscreen" value="true"/>
+</platform>
+
 <platform name="android">
     <icon qualifier="ldpi" src="res/icons/android/drawable-ldpi-icon.png" />
     <icon qualifier="mdpi" src="res/icons/android/drawable-mdpi-icon.png" />
@@ -111,7 +138,7 @@
     <splash qualifier="port-xxxhdpi" src="res/screens/android/drawable-port-xxxhdpi-screen.png" />
 </platform>
 <platform name="ios">
-    <icon height="57" platform="ios" src="res/icons/ios/icon.png" width="57" />
+   <icon height="57" platform="ios" src="res/icons/ios/icon.png" width="57" />
     <icon height="114" platform="ios" src="res/icons/ios/icon@2x.png" width="114" />
     <icon height="40" platform="ios" src="res/icons/ios/icon-40.png" width="40" />
     <icon height="80" platform="ios" src="res/icons/ios/icon-40@2x.png" width="80" />
@@ -138,14 +165,6 @@
     <splash height="960" platform="ios" src="res/screens/ios/Default@2x~iphone.png" width="640" />
     <splash height="480" platform="ios" src="res/screens/ios/Default~iphone.png" width="320" />
 </platform>
-
- <platform name="android">
-        <allow-intent href="market:*" />
-    </platform>
-    <platform name="ios">
-        <allow-intent href="itms:*" />
-        <allow-intent href="itms-apps:*" />
-    </platform>
 
     
 </widget>
