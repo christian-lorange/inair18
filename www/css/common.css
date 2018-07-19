@@ -453,8 +453,8 @@ a {
 }
 #schedule {
 
-  padding-top: 80px;
-  background: url("../img/schedule.jpg") no-repeat;
+  padding-top: 60px;
+  background: url("../img/schedule.JPG") no-repeat;
 }
 
 #schedule h1 {
@@ -464,7 +464,7 @@ a {
 
 
 #favorites {
-   background: url("../img/personal.jpg") no-repeat;
+   background: url("../img/personal.JPG") no-repeat;
   padding-top: 80px;
 }
 
